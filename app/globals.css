@@ -1,0 +1,105 @@
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f4f8f8;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.earthre-toasts {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-end !important;
+  width: min(390px, calc(100vw - 24px)) !important;
+  top: 15px !important;
+  right: 16px !important;
+}
+
+.earthre-toast {
+  width: min(390px, 100%);
+  min-height: 68px;
+  margin-bottom: 12px;
+  padding: 0 !important;
+  overflow: hidden;
+  border: 1px solid rgba(16, 42, 67, 0.1) !important;
+  border-left: 4px solid #168b6d !important;
+  border-radius: 10px !important;
+  color: #102a43 !important;
+  background: #fff !important;
+  box-shadow: 0 12px 30px rgba(16, 42, 67, 0.14) !important;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif !important;
+}
+
+.earthre-toast--error,
+.earthre-toast.Toastify__toast--error { border-left-color: #c93737 !important; }
+.earthre-toast--warning,
+.earthre-toast.Toastify__toast--warning { border-left-color: #b66a00 !important; }
+.earthre-toast--info,
+.earthre-toast.Toastify__toast--info { border-left-color: #1e6a9e !important; }
+
+.earthre-toast__body {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 14px 16px 14px 22px !important;
+}
+
+.earthre-toast__content {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 3px;
+  padding-right: 18px;
+}
+
+.earthre-toast__title {
+  color: #102a43;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.earthre-toast__description {
+  display: -webkit-box;
+  overflow: hidden;
+  color: #5d7185;
+  font-size: 12px;
+  line-height: 1.35;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.earthre-toast .Toastify__close-button {
+  align-self: flex-start;
+  margin-top: 13px;
+  margin-right: 12px;
+  color: #6d7f90;
+  opacity: 0.7;
+}
+
+.earthre-toast__progress {
+  height: 3px !important;
+  background: #168b6d !important;
+}
+
+.earthre-toast.Toastify__toast--error .earthre-toast__progress { background: #c93737 !important; }
+.earthre-toast.Toastify__toast--warning .earthre-toast__progress { background: #b66a00 !important; }
+.earthre-toast.Toastify__toast--info .earthre-toast__progress { background: #1e6a9e !important; }
+
+@media (max-width: 600px) {
+  .earthre-toasts {
+    top: 15px !important;
+    right: 12px !important;
+    left: 12px !important;
+    width: calc(100vw - 24px) !important;
+  }
+}
